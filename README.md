@@ -45,3 +45,13 @@ All work and changes tracked under the GitHub username Srishti635.
 ```bash
 git clone https://github.com/srishti635/JobBoardPlatform.git
 cd JobBoardPlatform
+
+## Recent Updates
+
+Latest change in our website is:
+
+- Added basic login page
+- Created structure page for layout and navigation
+- Implemented dark mode toggle
+- Integrated in-app notification system
+- Added search feature
