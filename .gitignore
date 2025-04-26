@@ -1,4 +1,7 @@
 /Board Platform/
 node_modules/
 *.log
+.gitconfig
+Git P/
+.bash_history
 
