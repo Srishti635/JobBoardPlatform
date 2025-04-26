@@ -46,7 +46,7 @@ All work and changes tracked under the GitHub username Srishti635.
 git clone https://github.com/srishti635/JobBoardPlatform.git
 cd JobBoardPlatform
 
-## Recent Updates
+**## Recent Updates**
 
 Latest change in our website is:
 
