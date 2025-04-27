@@ -306,6 +306,16 @@ header{
     color:var(--primaryColor);
     font-size:0.9rem;
 }
+.job-detail>p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .job-detail>p{
     display:-webkit-box;
