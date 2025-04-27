@@ -142,6 +142,42 @@ document.getElementById('search-btn').addEventListener('click', function() {
     }
     
 })
+
+// Clear Filters button functionality
+document.getElementById('clear-btn').addEventListener('click', function() {
+    // Clear search input
+    document.querySelector('.search-input').value = '';
+
+    // Reset all dropdowns to default option
+    document.getElementById('job-function').selectedIndex = 0;
+    document.getElementById('job-level').selectedIndex = 0;
+    document.getElementById('employment').selectedIndex = 0;
+    document.getElementById('location').selectedIndex = 0;
+    document.getElementById('education').selectedIndex = 0;
+
+    // Clear job list and show all jobs
+    const jobList = document.querySelector('.job-list');
+    jobList.innerHTML = '';
+    jobs.forEach(job => {
+        const jobCard = document.createElement('div');
+        jobCard.classList.add('job-card');
+        jobCard.innerHTML = `
+            <div class="job-name">
+                <img class="job-profile" src="images/${job.company.toLowerCase()}.png" alt="${job.company}">
+                <div class="job-detail">
+                    <h4>${job.company}</h4>
+                    <h3>${job.title}</h3>
+                    <p>${job.description}</p>
+                </div>
+            </div>
+            <div class="job-label">
+                ${job.tags.map(tag => `<a class="label-a">${tag}</a>`).join('')}
+            </div>
+            <div class="job-posted">${job.posted}</div>
+        `;
+        jobList.appendChild(jobCard);
+    });
+});
 document.getElementById('search-btn').addEventListener('click', function() {
     const searchInput = document.querySelector('.search-input').value.toLowerCase();
     const filteredJobs = jobs.filter(job => 
