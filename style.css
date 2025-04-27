@@ -99,10 +99,48 @@ h1{
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
+    margin: 10% auto; 
+    padding: 30px 40px;
+    border-radius: 10px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+.join-button {
+    width: 220px;
+    padding: 1rem 0;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    color: var(--blackColor);
+    background-color: var(--yellowColor);
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.join-button:hover {
+    background: transparent;
+    border: 2px solid var(--yellowColor);
+    color: var(--yellowColor);
+    box-shadow: none;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close:hover,
+.close:focus {
+    color: black;
 }
 .close {
     color: #aaa;
