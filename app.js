@@ -173,6 +173,36 @@ document.getElementById('job-level').addEventListener('change', function() {
     document.getElementById('search-btn').click();
 });
 
+document.getElementById('job-function').addEventListener('change', function() {
+    const selectedJobFunction = this.value;
+    const filterChosen = document.querySelector('.filter-chosen');
+
+    // Remove existing job function chosen tag if any
+    const existingTag = filterChosen.querySelector('.chosen-card.job-function');
+    if (existingTag) {
+        existingTag.remove();
+    }
+
+    // Add new chosen tag if selection is not default
+    if (selectedJobFunction && selectedJobFunction.toLowerCase() !== 'job function') {
+        const tagDiv = document.createElement('div');
+        tagDiv.classList.add('chosen-card', 'job-function');
+        tagDiv.innerHTML = `${selectedJobFunction} <i class="fas fa-times-circle"></i>`;
+        filterChosen.appendChild(tagDiv);
+
+        // Add click event to remove tag and reset dropdown
+        tagDiv.querySelector('i').addEventListener('click', () => {
+            tagDiv.remove();
+            document.getElementById('job-function').selectedIndex = 0;
+            // Trigger search update after removal
+            document.getElementById('search-btn').click();
+        });
+    }
+
+    // Trigger search update on selection change
+    document.getElementById('search-btn').click();
+});
+
 // Clear Filters button functionality
 document.getElementById('clear-btn').addEventListener('click', function() {
     // Clear search input
