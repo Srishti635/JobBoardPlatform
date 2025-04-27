@@ -152,29 +152,70 @@ var swiper= new Swiper(".mySwiper",
         }
     }
 })
-// Get the modal
-var modal = document.getElementById("sign-in-modal");
+document.addEventListener('DOMContentLoaded', () => {
+    // Sign In Modal
+    const signInModal = document.getElementById("sign-in-modal");
+    const signInBtn = document.getElementById("sign-in-btn");
+    const signInClose = signInModal.querySelector(".close");
 
-// Get the button that opens the modal
-var btn = document.getElementById("sign-in-btn");
+    signInBtn.addEventListener("click", () => {
+        signInModal.style.display = "block";
+    });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    signInClose.addEventListener("click", () => {
+        signInModal.style.display = "none";
+    });
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+    window.addEventListener("click", (event) => {
+        if (event.target === signInModal) {
+            signInModal.style.display = "none";
+        }
+    });
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+    // Feedback Modal
+    const feedbackBtn = document.getElementById("feedback-btn");
+    const feedbackModal = document.getElementById("feedback-modal");
+    const feedbackClose = document.getElementById("feedback-close");
+    const feedbackForm = document.getElementById("feedback-form");
+    const feedbackResponse = document.getElementById("feedback-response");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+    feedbackBtn.addEventListener("click", () => {
+        feedbackModal.style.display = "block";
+    });
+
+    feedbackClose.addEventListener("click", () => {
+        feedbackModal.style.display = "none";
+        feedbackResponse.style.display = "none";
+        feedbackForm.style.display = "block";
+        feedbackForm.reset();
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === feedbackModal) {
+            feedbackModal.style.display = "none";
+            feedbackResponse.style.display = "none";
+            feedbackForm.style.display = "block";
+            feedbackForm.reset();
+        }
+    });
+
+    feedbackForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = feedbackForm.name.value.trim();
+        const email = feedbackForm.email.value.trim();
+        const message = feedbackForm.message.value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Simulate form submission
+        setTimeout(() => {
+            feedbackForm.style.display = "none";
+            feedbackResponse.textContent = `Thank you for your feedback, ${name}!`;
+            feedbackResponse.style.display = "block";
+        }, 500);
+    });
+});
 
