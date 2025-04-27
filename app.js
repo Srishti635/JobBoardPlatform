@@ -143,6 +143,36 @@ document.getElementById('search-btn').addEventListener('click', function() {
     
 })
 
+document.getElementById('job-level').addEventListener('change', function() {
+    const selectedJobLevel = this.value;
+    const filterChosen = document.querySelector('.filter-chosen');
+
+    // Remove existing job level chosen tag if any
+    const existingTag = filterChosen.querySelector('.chosen-card.job-level');
+    if (existingTag) {
+        existingTag.remove();
+    }
+
+    // Add new chosen tag if selection is not default
+    if (selectedJobLevel && selectedJobLevel.toLowerCase() !== 'job level') {
+        const tagDiv = document.createElement('div');
+        tagDiv.classList.add('chosen-card', 'job-level');
+        tagDiv.innerHTML = `${selectedJobLevel} <i class="fas fa-times-circle"></i>`;
+        filterChosen.appendChild(tagDiv);
+
+        // Add click event to remove tag and reset dropdown
+        tagDiv.querySelector('i').addEventListener('click', () => {
+            tagDiv.remove();
+            document.getElementById('job-level').selectedIndex = 0;
+            // Trigger search update after removal
+            document.getElementById('search-btn').click();
+        });
+    }
+
+    // Trigger search update on selection change
+    document.getElementById('search-btn').click();
+});
+
 // Clear Filters button functionality
 document.getElementById('clear-btn').addEventListener('click', function() {
     // Clear search input
@@ -154,6 +184,10 @@ document.getElementById('clear-btn').addEventListener('click', function() {
     document.getElementById('employment').selectedIndex = 0;
     document.getElementById('location').selectedIndex = 0;
     document.getElementById('education').selectedIndex = 0;
+
+    // Clear all chosen tags
+    const filterChosen = document.querySelector('.filter-chosen');
+    filterChosen.innerHTML = '';
 
     // Clear job list and show all jobs
     const jobList = document.querySelector('.job-list');
