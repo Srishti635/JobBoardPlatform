@@ -141,7 +141,26 @@ document.getElementById('search-btn').addEventListener('click', function() {
         alert('Please enter a job title or keywords to search or select a filter.');
     }
     
-})
+});
+
+// Clear search input when clicking the clear icon inside the search input
+const clearSearchIcon = document.querySelector('.clear-search');
+const searchInputField = document.querySelector('.search-input');
+
+searchInputField.addEventListener('input', () => {
+    if (searchInputField.value.length > 0) {
+        clearSearchIcon.style.display = 'block';
+    } else {
+        clearSearchIcon.style.display = 'none';
+    }
+});
+
+clearSearchIcon.addEventListener('click', () => {
+    searchInputField.value = '';
+    clearSearchIcon.style.display = 'none';
+    // Trigger search update after clearing input
+    document.getElementById('search-btn').click();
+});
 
 document.getElementById('job-level').addEventListener('change', function() {
     const selectedJobLevel = this.value;

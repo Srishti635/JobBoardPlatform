@@ -52,11 +52,12 @@
       <!-- search -->
        <div class="search-wrapper">
         <div class="search-box">
-            <div class="search-card">
-                <input class="search-input" type="text" placeholder="Job title or keywords">
-                <button class="search-button" id="search-btn">Search</button>
-                <button class="search-button" id="clear-btn" style="margin-left: 10px; background-color: #ccc; color: #333;">Clear Filters</button>
-            </div>
+<div class="search-card" style="position: relative;">
+    <input class="search-input" type="text" placeholder="Job title or keywords" style="padding-right: 30px;">
+    <i class="fas fa-times-circle clear-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #999; display: none;"></i>
+    <button class="search-button" id="search-btn">Search</button>
+    <button class="search-button" id="clear-btn" style="margin-left: 10px; background-color: #ccc; color: #333;">Clear Filters</button>
+</div>
         </div>
        </div>
        <!-- filter box -->
