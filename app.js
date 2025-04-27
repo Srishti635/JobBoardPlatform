@@ -217,5 +217,61 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackResponse.style.display = "block";
         }, 500);
     });
+
+    // More List button functionality
+    const moreListBtn = document.querySelector('.job-more');
+    const jobList = document.querySelector('.job-list');
+    const featuredWrapper = document.querySelector('.featured-wrapper');
+    let showingAll = false;
+
+    // Initially show only first 5 job cards
+    const jobCards = jobList.querySelectorAll('.job-card');
+    jobCards.forEach((card, index) => {
+        if (index < 5) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Initially show only first 4 featured company cards
+    const companyCards = featuredWrapper.querySelectorAll('.featured-card');
+    companyCards.forEach((card, index) => {
+        if (index < 4) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    moreListBtn.addEventListener('click', () => {
+        if (!showingAll) {
+            // Show all job cards
+            jobCards.forEach(card => card.style.display = 'block');
+            // Show all company cards
+            companyCards.forEach(card => card.style.display = 'block');
+            moreListBtn.textContent = 'Show Less';
+            showingAll = true;
+        } else {
+            // Show only first 5 job cards
+            jobCards.forEach((card, index) => {
+                if (index < 5) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            // Show only first 4 company cards
+            companyCards.forEach((card, index) => {
+                if (index < 4) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            moreListBtn.textContent = 'More List';
+            showingAll = false;
+        }
+    });
 });
 
