@@ -1,3 +1,7 @@
-index.html
-style.css
-app.jss
+/Board Platform/
+node_modules/
+*.log
+.gitconfig
+Git P/
+.bash_history
+

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Responsive Job Portal Website</title>
 </head>
 <body>
     <!-- navbar -->
-     <nav class="navbar">
+    <nav class="navbar">
         <h2 class="navbar-logo"><a href="#">JOBHUNT</a></h2>
         <div class="navbar-menu">
             <a href="#jobs">Jobs</a>
@@ -25,394 +25,388 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-     </nav>
-     <div id="sign-in-modal" class="modal">
+    </nav>
+    <div id="sign-in-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Sign In</h2>
             <form id="sign-in-form">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required />
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required />
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required />
                 <button type="submit">Register</button>
             </form>
         </div>
     </div>
 
-
-     <!-- header -->
-      <header>
+    <!-- header -->
+    <header>
         <h1 class="header-title">
-            FIND YOUR <br> <span>PERFECT JOB</span> <br>EASILY
+            FIND YOUR <br />
+            <span>PERFECT JOB</span> <br />
+            EASILY
         </h1>
-      </header>
-      <!-- search -->
-       <div class="search-wrapper">
+    </header>
+    <!-- search -->
+    <div class="search-wrapper">
         <div class="search-box">
             <div class="search-card">
-                <input class="search-input" type="text" placeholder="Job title or keywords">
+                <input class="search-input" type="text" placeholder="Job title or keywords" />
                 <button class="search-button" id="search-btn">Search</button>
             </div>
         </div>
-       </div>
-       <!-- filter box -->
-        <div class="filter-box">
-            <div class="filter-dropdown">
-                <select class="filter-select" id="job-level" name="job-level">
-                    <option>Job Level</option>
-                    <option>Entry</option>
-                    <option>Mid-Senior</option>
-                    <option>Director</option>
-                </select>
-                <select class="filter-select" id="job-function" name="job-function">
-                    <option>Job Function</option>
-                    <option>IT</option>
-                    <option>Management</option>
-                    <option>Education</option>
-                </select>
-                <select class="filter-select" id="employment" name="employment">
-                    <option>Employment Type</option>
-                    <option>internship</option>
-                    <option>Part Time</option>
-                    <option>Full Time</option>
-                </select>
-                <select class="filter-select" id="location" name="location">
-                    <option>Locations</option>
-                    <option>Remote</option>
-                    <option>US</option>
-                    <option>UK</option>
-                </select>
-                <select class="filter-select" id="education" name="education">
-                    <option>Education</option>
-                    <option>High School</option>
-                    <option>Bachelor's Degree</option>
-                    <option>Master's Degree</option>
-                </select>
+    </div>
+    <!-- filter box -->
+    <div class="filter-box">
+        <div class="filter-dropdown">
+            <select class="filter-select" id="job-level" name="job-level">
+                <option>Job Level</option>
+                <option>Entry</option>
+                <option>Mid-Senior</option>
+                <option>Director</option>
+            </select>
+            <select class="filter-select" id="job-function" name="job-function">
+                <option>Job Function</option>
+                <option>IT</option>
+                <option>Management</option>
+                <option>Education</option>
+            </select>
+            <select class="filter-select" id="employment" name="employment">
+                <option>Employment Type</option>
+                <option>internship</option>
+                <option>Part Time</option>
+                <option>Full Time</option>
+            </select>
+            <select class="filter-select" id="location" name="location">
+                <option>Locations</option>
+                <option>Remote</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+            <select class="filter-select" id="education" name="education">
+                <option>Education</option>
+                <option>High School</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+            </select>
+        </div>
+        <div class="filter-chosen">
+            <div class="chosen-card">
+                Remote <i class="fas fa-times-circle"></i>
             </div>
-            <div class="filter-chosen">
-                <div class="chosen-card">
-                    Remote <i class="fas fa-times-circle"></i>
+            <div class="chosen-card">
+                Full Time <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Financial Tech <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Entry Level <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Job Listing -->
+    <section class="job-list" id="jobs">
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="Tesla.png" />
+                <div class="job-detail">
+                    <h4>Tesla</h4>
+                    <h3>Mechanical Engineer</h3>
+                    <p>Work on innovative automotive projects.</p>
                 </div>
-                <div class="chosen-card">
-                    Full Time <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Math skills</a>
+                <a class="label-b" href="#">Communication skills</a>
+                <a class="label-c" href="#">Iterative Design</a>
+            </div>
+            <div class="job-posted">Posted 2 mins ago</div>
+        </div>
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="ebay.png" />
+                <div class="job-detail">
+                    <h4>Ebay</h4>
+                    <h3>Business Development</h3>
+                    <p>Drive growth through strategic partnerships.</p>
                 </div>
-                <div class="chosen-card">
-                    Financial Tech <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Marketing</a>
+                <a class="label-b" href="#">Sales</a>
+                <a class="label-c" href="#">Time Management</a>
+            </div>
+            <div class="job-posted">Posted 2 mins ago</div>
+        </div>
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="youtube.png" />
+                <div class="job-detail">
+                    <h4>Youtube</h4>
+                    <h3>UI UX Designer</h3>
+                    <p>Design user-friendly interfaces for our platform.</p>
                 </div>
-                <div class="chosen-card">
-                    Entry Level <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Coding</a>
+                <a class="label-b" href="#">Information architecture</a>
+                <a class="label-c" href="#">Design skills</a>
+            </div>
+            <div class="job-posted">Posted an hour ago</div>
+        </div>
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="Amazon.png" />
+                <div class="job-detail">
+                    <h4>Amazon</h4>
+                    <h3>Software Engineer</h3>
+                    <p>Develop scalable software solutions.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Front End development</a>
+                <a class="label-b" href="#">Back End development</a>
+                <a class="label-c" href="#">Problem solving</a>
+            </div>
+            <div class="job-posted">Posted an hour ago</div>
+        </div>
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="microsoft.png" />
+                <div class="job-detail">
+                    <h4>Microsoft</h4>
+                    <h3>Cloud Engineer</h3>
+                    <p>Design and deploy cloud-based infrastructure.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Azure</a>
+                <a class="label-b" href="#">DevOps</a>
+                <a class="label-c" href="#">Security</a>
+            </div>
+            <div class="job-posted">Posted 2 hours ago</div>
+        </div>
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="netflix.png" />
+                <div class="job-detail">
+                    <h4>Netflix</h4>
+                    <h3>Data Scientist</h3>
+                    <p>Analyze viewer data to improve content recommendations.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Python</a>
+                <a class="label-b" href="#">Machine Learning</a>
+                <a class="label-c" href="#">Big Data</a>
+            </div>
+            <div class="job-posted">Posted 3 hours ago</div>
+        </div>
+        <div class="job-label">
+            <a class="label-a" href="#">Front End development</a>
+            <a class="label-b" href="#">Back End development</a>
+            <a class="label-c" href="#">Problem solving</a>
+        </div>
+        <div class="job-posted">Posted an hour ago</div>
+        <button class="job-more">More List</button>
+    </section>
+    <!-- join -->
+    <section class="join">
+        <div class="join-detail">
+            <h1 class="section-title">LETS START YOUR NEW JOB WITH US</h1>
+        </div>
+        <button class="join-button">Join Now</button>
+    </section>
+    <!-- featured company -->
+    <section class="featured" id="companies">
+        <h1 class="section-title">Featured Companies</h1>
+
+        <div class="featured-wrapper">
+            <div class="featured-card">
+                <img class="featured-image" src="ebay.png" />
+                <p>Ebay</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="youtube.png" />
+                <p>Youtube</p>
+                <button class="featured-button">View 1 job</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="Google.png" />
+                <p>Google</p>
+                <button class="featured-button">View 3 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="facebook.png" />
+                <p>Facebook</p>
+                <button class="featured-button">View 4 jobs</button>
+            </div>
+
+            <div class="featured-card">
+                <img class="featured-image" src="Amazon.png" />
+                <p>Amazon</p>
+                <button class="featured-button">View 3 jobs</button>
+            </div>
+        </div>
+    </section>
+    <!-- testimoni -->
+    <section class="testimoni" id="testimoni">
+        <h1 class="section-title">Testimonial</h1>
+        <p>Lets see what our clients say about us.</p>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>
+                        It has been a very satisfying experience using JobHunt. I acknowledge your timely help and support in sourcing suitable candidates according to given specifications.
+                    </h3>
+                    <div class="testimoni-pic">
+                        <img src="image-1.png" />
+                        <p>John Smith</p>
+                        <span>Business Development</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>
+                        We are happy to share that JobHunt has been a great hiring partner for us. We appreciate its good services, quick and friendly support.
+                    </h3>
+                    <div class="testimoni-pic">
+                        <img src="image-2.png" />
+                        <p>Taylor Tama</p>
+                        <span>Data Analyst</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>
+                        We are very happy by using JobHunt's Job posting and data base services and never faced any problem. We closed good number of positions as well.
+                    </h3>
+                    <div class="testimoni-pic">
+                        <img src="image-3.png" />
+                        <p>Peter</p>
+                        <span>Product Analyst</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>
+                        I had been struggling to find the right job for months until I discovered JobHunt. The user-friendly interface made my job search so much easier!
+                    </h3>
+                    <div class="testimoni-pic">
+                        <img src="image-4.png" />
+                        <p>Albert John</p>
+                        <span>Logistic Director</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>
+                        The support I received from JobHunt was incredible. Their career advice articles and networking events helped me build connections in my industry.
+                    </h3>
+                    <div class="testimoni-pic">
+                        <img src="image-5.png" />
+                        <p>Julia Robert</p>
+                        <span>Marketing Officer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- blog -->
+    <section class="blog" id="blog">
+        <h1 class="section-title">Career Advices</h1>
+        <p>Learn more career tips from company's recruiter</p>
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <img class="blog-image" src="blog-1.png" width="1500" />
+                <div class="blog-detail">
+                    <span>11 Apr 2024</span>
+                    <h4>How to enjoy your work</h4>
+                    <p>
+                        To truly enjoy your work, it's essential to find meaning and purpose in what you do, as this can significantly enhance your motivation and satisfaction. Start by identifying your strengths and aligning your tasks with them, allowing you to engage in activities that energize you. Setting achievable goals can provide a sense of direction and accomplishment, while creating a positive and comfortable workspace can elevate your mood. Building strong relationships with colleagues fosters a supportive environment, making daily interactions more enjoyable.
+                    </p>
+                    <hr class="divider" />
+                    <a href="#" class="blog-more">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-image" src="Blog-2.png" />
+                <div class="blog-detail">
+                    <span>11 Apr 2024</span>
+                    <h4>10 tips for technical interview.</h4>
+                    <p>
+                        Understand the Job Requirements: Review the job description carefully to identify the technical skills and knowledge that are most relevant. Focus your preparation on those areas.
+
+                        Brush Up on Fundamentals: Make sure you have a strong grasp of the fundamental concepts related to your field, whether it is algorithms, data structures, system design, or programming languages. Review key topics and practice solving problems related to them. Practice Coding Problems: Use platforms like LeetCode, HackerRank, or CodeSignal to practice coding problems. Focus on a variety of topics and difficulty levels to build your problem-solving skills.
+                    </p>
+                    <hr class="divider" />
+                    <a href="#" class="blog-more">Read More </a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-image" src="Blog-3.png" width="1500" />
+                <div class="blog-detail">
+                    <span>11 May 2024</span>
+                    <h4>Managing Time Effectively.</h4>
+                    <p>
+                        Set Clear Goals: Define short-term and long-term goals. Use the SMART criteria (Specific, Measurable, Achievable, Relevant, Time-bound) to create clear and actionable objectives.
+
+                        Prioritize Tasks: Use a prioritization method, such as the Eisenhower Matrix, to categorize tasks based on urgency and importance. Focus on high-priority tasks that align with your goals.
+
+                        Create a To-Do List: Write down tasks for the day or week. Break larger tasks into smaller, manageable steps to make them less overwhelming and easier to tackle.
+                    </p>
+                    <hr class="divider" />
+                    <a href="#" class="blog-more">Read More</a>
                 </div>
             </div>
         </div>
-        <!-- Job Listing -->
-         <section class="job-list" id="jobs">
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="images/Tesla.png">
-                    <div class="job-detail">
-                        <h4>Tesla</h4>
-                        <h3>Mechanical Engineer</h3>
-                        <p>Work on innovative automotive projects.</p>
-                    </div>
-                </div>
-                <div class="job-label">
-                    <a class="label-a" href="#">Math skills</a>
-                    <a class="label-b" href="#">Communication skills</a>
-                    <a class="label-c" href="#">Iterative Design</a>
-                </div>
-                <div class="job-posted">
-                    Posted 2 mins ago
-                </div>
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+            <h3>JOBHUNT</h3>
+            <p>Empower your career with JobHunt today</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab-fa-youtube"></i></a>
             </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="images/ebay.png">
-                    <div class="job-detail">
-                        <h4>Ebay</h4>
-                        <h3>Business Development</h3>
-                        <p>Drive growth through strategic partnerships.</p>
-                    </div>
-                </div>
-                <div class="job-label">
-                    <a class="label-a" href="#">Marketing</a>
-                    <a class="label-b" href="#">Sales</a>
-                    <a class="label-c" href="#">Time Management</a>
-                </div>
-                <div class="job-posted">
-                    Posted 2 mins ago
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="images/youtube.png">
-                    <div class="job-detail">
-                        <h4>Youtube</h4>
-                        <h3>UI UX Designer</h3>
-                        <p>Design user-friendly interfaces for our platform.</p>
-                    </div>
-                </div>
-                <div class="job-label">
-                    <a class="label-a" href="#">Coding</a>
-                    <a class="label-b" href="#">Information architecture</a>
-                    <a class="label-c" href="#">Design skills</a>
-                </div>
-                <div class="job-posted">
-                    Posted an hour ago
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="images/Amazon.png">
-                    <div class="job-detail">
-                        <h4>Amazon</h4>
-                        <h3>Software Engineer</h3>
-                        <p>Develop scalable software solutions.</p>
-                    </div>
-                </div>
-	     <div class="job-card">
-    <div class="job-name">
-        <img class="job-profile" src="images/microsoft.png">
-        <div class="job-detail">
-            <h4>Microsoft</h4>
-            <h3>Cloud Engineer</h3>
-            <p>Design and deploy cloud-based infrastructure.</p>
         </div>
-    </div>
-    <div class="job-label">
-        <a class="label-a" href="#">Azure</a>
-        <a class="label-b" href="#">DevOps</a>
-        <a class="label-c" href="#">Security</a>
-    </div>
-    <div class="job-posted">
-        Posted 2 hours ago
-    </div>
-</div>
-
-<div class="job-card">
-    <div class="job-name">
-        <img class="job-profile" src="images/netflix.png">
-        <div class="job-detail">
-            <h4>Netflix</h4>
-            <h3>Data Scientist</h3>
-            <p>Analyze viewer data to improve content recommendations.</p>
+        <div class="footer-wrapper">
+            <h4>Explore</h4>
+            <a href="#">Top Companies</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Podcast</a>
+            <a href="#">Careers</a>
         </div>
-    </div>
-    <div class="job-label">
-        <a class="label-a" href="#">Python</a>
-        <a class="label-b" href="#">Machine Learning</a>
-        <a class="label-c" href="#">Big Data</a>
-    </div>
-    <div class="job-posted">
-        Posted 3 hours ago
-    </div>
-</div>
-                <div class="job-label">
-                    <a class="label-a" href="#">Front End development</a>
-                    <a class="label-b" href="#">Back End development</a>
-                    <a class="label-c" href="#">Problem solving</a>
-                </div>
-                <div class="job-posted">
-                    Posted an hour ago
-                </div>
-            </div>
-            <button class="job-more">More List</button>
-         </section>
-         <!-- join -->
-          <section class="join">
-            <div class="join-detail">
-                <h1 class="section-title">LETS START YOUR NEW JOB WITH US</h1>
-            </div>
-            <button class="join-button">Join Now</button>
-          </section>
-          <!-- featured company -->
-           <section class="featured" id="companies">
-            <h1 class="section-title">Featured Companies</h1>
-            
-            <div class="featured-wrapper">
-                <div class="featured-card">
-                    <img class="featured-image" src="images/ebay.png">
-                    <p>Ebay</p>
-                    <button class="featured-button">View 2 jobs</button>
-                </div>
-                <div class="featured-card">
-                    <img class="featured-image" src="images/youtube.png">
-                    <p>Youtube</p>
-                    <button class="featured-button">View 1 job</button>
-                </div>
-                <div class="featured-card">
-                    <img class="featured-image" src="images/Google.png">
-                    <p>Google</p>
-                    <button class="featured-button">View 3 jobs</button>
-                </div>
-                <div class="featured-card">
-                    <img class="featured-image" src="images/facebook.png">
-                    <p>Facebook</p>
-                    <button class="featured-button">View 4 jobs</button>
-                </div>
-                
-                <div class="featured-card">
-                    <img class="featured-image" src="images/Amazon.png">
-                    <p>Amazon</p>
-                    <button class="featured-button">View 3 jobs</button>
-                </div>
-                
-            </div>
-           </section>
-           <!-- testimoni -->
-            <section class="testimoni" id="testimoni">
-                <h1 class="section-title">Testimonial</h1>
-                <p>Lets see what our clients say about us.</p>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                       <div class="swiper-slide">
-                            <i class="fas fa-quote-left"></i>
-                            <h3>It has been a very satisfying experience using JobHunt. I acknowledge your timely help and support in sourcing suitable candidates according to given specifications.
-                            </h3>
-                            <div class="testimoni-pic">
-                                <img src="images/image-1.png" >
-                                <p>John Smith</p>
-                                <span>Business Development</span>
-                            </div>
-                            
-                        </div>
-                        <div class="swiper-slide">
-                            <i class="fas fa-quote-left"></i>
-                            <h3>We are happy to share that JobHunt has been a great hiring partner for us. We appreciate its good services, quick and friendly support. </h3>
-                            <div class="testimoni-pic">
-                                <img src="images/image-2.png">
-                                <p>Taylor Tama</p>
-                                <span>Data Analyst</span>
-                            </div>
-                            
-                        </div>
-                        <div class="swiper-slide">
-                            <i class="fas fa-quote-left"></i>
-                            <h3>We are very happy by using JobHunt's Job posting and data base services and never faced any problem. We closed good number of positions as well. </h3>
-                            <div class="testimoni-pic">
-                                <img src="images/image-3.png">
-                                <p>Peter</p>
-                                <span>Product Analyst</span>
-                            </div>
-                            
-                        </div>
-                        <div class="swiper-slide">
-                            <i class="fas fa-quote-left"></i>
-                            <h3>I had been struggling to find the right job for months until I discovered JobHunt. The user-friendly interface made my job search so much easier! </h3>
-                            <div class="testimoni-pic">
-                                <img src="images/image-4.png">
-                                <p>Albert John</p>
-                                <span>Logistic Director</span>
-                            </div>
-                            
-                        </div>
-                        <div class="swiper-slide">
-                            <i class="fas fa-quote-left"></i>
-                            <h3>The support I received from JobHunt was incredible. Their career advice articles and networking events helped me build connections in my industry.  </h3>
-                            <div class="testimoni-pic">
-                                <img src="images/image-5.png">
-                                <p>Julia Robert</p>
-                                <span>Marketing Officer</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="swiper-pagination">
-
-                    </div>
-                </div>
-            </section>
-             <!-- blog -->
-              <section class="blog" id="blog">
-                <h1 class="section-title">Career Advices</h1>
-                <p>Learn more career tips from company's recruiter</p>
-                <div class="blog-wrapper">
-                    <div class="blog-card">
-                        <img class="blog-image" src="images/blog-1.png" width="1500" >
-                        <div class="blog-detail">
-                            <span>11 Apr 2024</span>
-                            <h4>How to enjoy your work</h4>
-                            <p>To truly enjoy your work, it's essential to find meaning and purpose in what you do, as this can significantly enhance your motivation and satisfaction. Start by identifying your strengths and aligning your tasks with them, allowing you to engage in activities that energize you. Setting achievable goals can provide a sense of direction and accomplishment, while creating a positive and comfortable workspace can elevate your mood. Building strong relationships with colleagues fosters a supportive environment, making daily interactions more enjoyable. 
-                            </p>
-                            <hr class="divider">
-                            <a href="#" class="blog-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <img class="blog-image" src="images/Blog-2.png" >
-                        <div class="blog-detail">
-                            <span>11 Apr 2024</span>
-                            <h4>10 tips for technical interview.</h4>
-                            <p>Understand the Job Requirements: Review the job description carefully to identify the technical skills and knowledge that are most relevant. Focus your preparation on those areas.
-
-                                Brush Up on Fundamentals: Make sure you have a strong grasp of the fundamental concepts related to your field, whether it is algorithms, data structures, system design, or programming languages. Review key topics and practice solving problems related to them.
-                                Practice Coding Problems: Use platforms like LeetCode, HackerRank, or CodeSignal to practice coding problems. Focus on a variety of topics and difficulty levels to build your problem-solving skills.
-                                </p>
-                            <hr class="divider">
-                            <a href="#"class="blog-more">Read More </a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <img class="blog-image" src="images/Blog-3.png" width="1500" >
-                        <div class="blog-detail">
-                            <span>11 May 2024</span>
-                            <h4>Managing Time Effectively.</h4>
-                            <p>Set Clear Goals: Define short-term and long-term goals. Use the SMART criteria (Specific, Measurable, Achievable, Relevant, Time-bound) to create clear and actionable objectives.
-
-                                Prioritize Tasks: Use a prioritization method, such as the Eisenhower Matrix, to categorize tasks based on urgency and importance. Focus on high-priority tasks that align with your goals.
-                                
-                                Create a To-Do List: Write down tasks for the day or week. Break larger tasks into smaller, manageable steps to make them less overwhelming and easier to tackle.
-                                
-                                </p>
-                            <hr class="divider">
-                            <a href="#" class="blog-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-              </section>
-              <footer>
-                <div class="footer-wrapper">
-                    <h3>JOBHUNT</h3>
-                    <p>Empower your career with JobHunt today</p>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab-fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-wrapper">
-                    <h4>Explore</h4>
-                    <a href="#">Top Companies</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Podcast</a>
-                    <a href="#">Careers</a>
-                 </div>
-                 <div class="footer-wrapper">
-                    <h4>About</h4>
-                    <a href="#">FAQ</a>
-                    <a href="#">Get Inspired</a>
-                    <a href="#">Blog</a>
-                 </div>
-                 <div class="footer-wrapper">
-                    <h4>Support</h4>
-                    <a href="#">Customer Service</a>  
-                    <a href="#">Trust and Safety</a>
-                    <a href="#">Partnership</a>
-                 </div>
-                 <div class="footer-wrapper">
-                    <h4>Community</h4>
-                    <a href="#">Community</a>
-                    <a href="#">Invite a Friend</a>
-                    <a href="#">Event</a>
-                 </div>
-              </footer>
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-            <script src="app.js"></script>
-
-
+        <div class="footer-wrapper">
+            <h4>About</h4>
+            <a href="#">FAQ</a>
+            <a href="#">Get Inspired</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-wrapper">
+            <h4>Support</h4>
+            <a href="#">Customer Service</a>
+            <a href="#">Trust and Safety</a>
+            <a href="#">Partnership</a>
+        </div>
+        <div class="footer-wrapper">
+            <h4>Community</h4>
+            <a href="#">Community</a>
+            <a href="#">Invite a Friend</a>
+            <a href="#">Event</a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
