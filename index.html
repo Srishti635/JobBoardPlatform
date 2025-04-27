@@ -229,7 +229,7 @@
                 </div>
                 <div class="job-card">
                     <div class="job-name">
-                        <img class="job-profile" src="Apple.png">
+                    <img class="job-profile" src="images/Apple.png">
                         <div class="job-detail">
                             <h4>Apple</h4>
                             <h3>iOS Developer</h3>
@@ -247,7 +247,7 @@
                 </div>
             <div class="job-card">
                 <div class="job-name">
-                    <img class="job-profile" src="facebook.png">
+                    <img class="job-profile" src="images/facebook.png">
                     <div class="job-detail">
                         <h4>Facebook</h4>
                         <h3>Social Media Manager</h3>
@@ -265,7 +265,7 @@
             </div>
             <div class="job-card">
                 <div class="job-name">
-                    <img class="job-profile" src="Google.png">
+                    <img class="job-profile" src="images/Google.png">
                     <div class="job-detail">
                         <h4>Google</h4>
                         <h3>Software Engineer</h3>
@@ -325,7 +325,29 @@
             <div class="join-detail">
                 <h1 class="section-title">LETS START YOUR NEW JOB WITH US</h1>
             </div>
-            <button class="join-button">Join Now</button>
+            <button class="join-button" id="join-now-btn">Join Now</button>
+          </section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const joinBtn = document.getElementById('join-now-btn');
+    const signInModal = document.getElementById('sign-in-modal');
+    const closeBtn = signInModal.querySelector('.close');
+
+    joinBtn.addEventListener('click', function() {
+      signInModal.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', function() {
+      signInModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === signInModal) {
+        signInModal.style.display = 'none';
+      }
+    });
+  });
+</script>
           </section>
           <!-- featured company -->
            <section class="featured" id="companies">
@@ -364,17 +386,17 @@
                     <button class="featured-button">View 3 jobs</button>
                 </div>
                 <div class="featured-card">
-                    <img class="featured-image" src="Apple.png">
+                    <img class="featured-image" src="images/Apple.png">
                     <p>Apple</p>
                     <button class="featured-button">View 2 jobs</button>
                 </div>
                 <div class="featured-card">
-                    <img class="featured-image" src="facebook.png">
+                    <img class="featured-image" src="images/facebook.png">
                     <p>Facebook</p>
                     <button class="featured-button">View 4 jobs</button>
                 </div>
                 <div class="featured-card">
-                    <img class="featured-image" src="Google.png">
+                    <img class="featured-image" src="images/Google.png">
                     <p>Google</p>
                     <button class="featured-button">View 3 jobs</button>
                 </div>
