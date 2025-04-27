@@ -49,11 +49,70 @@ document.getElementById('search-btn').addEventListener('click', function() {
     const jobList = document.querySelector('.job-list');
     jobList.innerHTML = ''; // Clear previous results
 
-    if (searchInput.trim() !== '') {
-        const filteredJobs = jobs.filter(job => 
-            job.title.toLowerCase().includes(searchInput) || 
-            job.company.toLowerCase().includes(searchInput)
-        );
+    // Get selected filter values
+    const jobFunctionSelect = document.getElementById('job-function');
+    const selectedJobFunction = jobFunctionSelect.value.toLowerCase();
+
+    const jobLevelSelect = document.getElementById('job-level');
+    const selectedJobLevel = jobLevelSelect.value.toLowerCase();
+
+    const employmentSelect = document.getElementById('employment');
+    const selectedEmployment = employmentSelect.value.toLowerCase();
+
+    const locationSelect = document.getElementById('location');
+    const selectedLocation = locationSelect.value.toLowerCase();
+
+    const educationSelect = document.getElementById('education');
+    const selectedEducation = educationSelect.value.toLowerCase();
+
+    if (
+        searchInput.trim() !== '' ||
+        (selectedJobFunction && selectedJobFunction !== 'job function') ||
+        (selectedJobLevel && selectedJobLevel !== 'job level') ||
+        (selectedEmployment && selectedEmployment !== 'employment type') ||
+        (selectedLocation && selectedLocation !== 'locations') ||
+        (selectedEducation && selectedEducation !== 'education')
+    ) {
+        const filteredJobs = jobs.filter(job => {
+            const matchesSearch =
+                job.title.toLowerCase().includes(searchInput) ||
+                job.company.toLowerCase().includes(searchInput) ||
+                job.description.toLowerCase().includes(searchInput);
+
+            const matchesJobFunction =
+                selectedJobFunction === 'job function' ||
+                selectedJobFunction === '' ||
+                job.tags.some(tag => tag.toLowerCase() === selectedJobFunction);
+
+            const matchesJobLevel =
+                selectedJobLevel === 'job level' ||
+                selectedJobLevel === '' ||
+                job.tags.some(tag => tag.toLowerCase() === selectedJobLevel);
+
+            const matchesEmployment =
+                selectedEmployment === 'employment type' ||
+                selectedEmployment === '' ||
+                job.tags.some(tag => tag.toLowerCase() === selectedEmployment);
+
+            const matchesLocation =
+                selectedLocation === 'locations' ||
+                selectedLocation === '' ||
+                job.tags.some(tag => tag.toLowerCase() === selectedLocation);
+
+            const matchesEducation =
+                selectedEducation === 'education' ||
+                selectedEducation === '' ||
+                job.tags.some(tag => tag.toLowerCase() === selectedEducation);
+
+            return (
+                matchesSearch &&
+                matchesJobFunction &&
+                matchesJobLevel &&
+                matchesEmployment &&
+                matchesLocation &&
+                matchesEducation
+            );
+        });
 
         if (filteredJobs.length > 0) {
             filteredJobs.forEach(job => {
@@ -79,7 +138,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
             jobList.innerHTML = '<p>No jobs found.</p>';
         }
     } else {
-        alert('Please enter a job title or keywords to search.');
+        alert('Please enter a job title or keywords to search or select a filter.');
     }
     
 })
