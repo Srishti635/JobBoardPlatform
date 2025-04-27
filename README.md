@@ -17,19 +17,6 @@ This project aims to apply SCM practices rather than focusing on frontend featur
 - CSS3 
 - Git & GitHub 
 - Git Bash (CLI)
-## New Job Cards Added
-
-Two new job cards have been added to the job portal:
-
-1. *Microsoft Cloud Engineer*
-   - Role focused on deploying and maintaining cloud infrastructure using Microsoft Azure.
-
-2. *Data Scientist*
-   - Responsible for analyzing large datasets to gain insights and support business decisions.
-
-These cards are styled consistently and include "Apply Now" buttons.
-
-
 
 ##  SCM Features Demonstrated
 
@@ -45,13 +32,3 @@ All work and changes tracked under the GitHub username Srishti635.
 ```bash
 git clone https://github.com/srishti635/JobBoardPlatform.git
 cd JobBoardPlatform
-
-**## Recent Updates**
-
-Latest change in our website is:
-
-- Added basic login page
-- Created structure page for layout and navigation
-- Implemented dark mode toggle
-- Integrated in-app notification system
-- Added search feature
