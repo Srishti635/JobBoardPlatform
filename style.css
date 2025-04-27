@@ -42,7 +42,7 @@ h1{
 
 .navbar{
     width:100%;
-    height:60px;
+    height:50px;
     display:flex;
     justify-content: space-between;
     position:absolute;
@@ -76,7 +76,7 @@ h1{
 }
 
 .menu-toggle .bar{
-    width: 15px;
+    width: 16px;
     height:2px;
     margin:3px auto;
     transition: all 0.3 ease-in-out;
@@ -221,7 +221,7 @@ header{
     padding:0.5rem;
 }
 .search-button{
-    width:200px;
+    width:210px;
     background: var(--primaryColor);
     border:none;
     color:var(--whiteColor);
