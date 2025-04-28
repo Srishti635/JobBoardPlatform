@@ -44,15 +44,15 @@ const jobs = [
         posted: "Posted an hour ago"
     }
 ];
-document.getElementById('search-btn').addEventListener('click', function() {
-    const searchInput = document.querySelector('.search-input').value.toLowerCase();
+document.getElementById('sign-in-btn').addEventListener("click", function() {
+    const signinInput = document.querySelector('.signin-input').value.toLowerCase();
     const jobList = document.querySelector('.job-list');
     jobList.innerHTML = ''; // Clear previous results
 
     if (searchInput.trim() !== '') {
         const filteredJobs = jobs.filter(job => 
-            job.title.toLowerCase().includes(searchInput) || 
-            job.company.toLowerCase().includes(searchInput)
+            job.title.toLowerCase().includes(signinInput) || 
+            job.company.toLowerCase().includes(signinInput)
         );
 
         if (filteredJobs.length > 0) {
@@ -83,12 +83,12 @@ document.getElementById('search-btn').addEventListener('click', function() {
     }
     
 })
-document.getElementById('search-btn').addEventListener('click', function() {
-    const searchInput = document.querySelector('.search-input').value.toLowerCase();
+document.getElementById('sign-in-btn').addEventListener('click', function() {
+    const signinInput = document.querySelector('.sign-in-input').value.toLowerCase();
     const filteredJobs = jobs.filter(job => 
-        job.title.toLowerCase().includes(searchInput) || 
-        job.company.toLowerCase().includes(searchInput) ||
-        job.description.toLowerCase().includes(searchInput) // Check description too
+        job.title.toLowerCase().includes(signinInput) || 
+        job.company.toLowerCase().includes(signinInput) ||
+        job.description.toLowerCase().includes(signinInput) // Check description too
     );
 
     // Display filtered jobs
@@ -121,7 +121,7 @@ $(".navbar-menu a").click(function(e){
  e.preventDefault();
 })
 // swiper
-var swiper= new Swiper(".mySwiper",
+var swiper= new swiper(".mySwiper",
 {
     loop:true,
     autoplay:{
