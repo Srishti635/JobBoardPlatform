@@ -17,19 +17,6 @@ This project aims to apply SCM practices rather than focusing on frontend featur
 - CSS3 
 - Git & GitHub 
 - Git Bash (CLI)
-## New Job Cards Added
-
-Two new job cards have been added to the job portal:
-
-1. *Microsoft Cloud Engineer*
-   - Role focused on deploying and maintaining cloud infrastructure using Microsoft Azure.
-
-2. *Data Scientist*
-   - Responsible for analyzing large datasets to gain insights and support business decisions.
-
-These cards are styled consistently and include "Apply Now" buttons.
-
-
 
 ##  SCM Features Demonstrated
 

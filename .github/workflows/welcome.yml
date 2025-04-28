@@ -1,0 +1,19 @@
+name: JobBoard Platform - CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  jobboard-welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Welcome JobBoardPlatform Developers
+        run: echo "Welcome to the JobBoard Platform! Continuous Integration is now active!"
