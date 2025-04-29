@@ -686,3 +686,30 @@ footer{
    
     }
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1 {
+  color: #11a534;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+}
