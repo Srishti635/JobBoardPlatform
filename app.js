@@ -177,4 +177,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+<script>
+    const feedbackForm = document.getElementById('feedback-form');
+    feedbackForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your feedback!');
+        feedbackForm.reset();
+    });
+</script>
 
