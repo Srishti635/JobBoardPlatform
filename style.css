@@ -289,6 +289,33 @@ header{
 .job-card:hover{
     box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
 }
+/* Top Companies Section */
+.companies {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.companies-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.company-card img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.company-card img:hover {
+    transform: scale(1.1);
+}
+
 .job-name{
     display:flex;
 }
