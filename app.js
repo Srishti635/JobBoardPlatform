@@ -44,11 +44,11 @@ const jobs = [
         posted: "Posted an hour ago"
     }
 ];
-document.getElementById('search-btn').addEventListener('click', function() {
-    const searchInput = document.querySelector('.search-input').value.toLowerCase();
+document.getElementById('sign-in-btn').addEventListener("click", function() {
+    const signinInput = document.querySelector('.signin-input').value.toLowerCase();
     const jobList = document.querySelector('.job-list');
     jobList.innerHTML = ''; // Clear previous results
-
+ nehapundir26-patch-4
     // Get selected filter values
     const jobFunctionSelect = document.getElementById('job-function');
     const selectedJobFunction = jobFunctionSelect.value.toLowerCase();
@@ -113,6 +113,11 @@ document.getElementById('search-btn').addEventListener('click', function() {
                 matchesEducation
             );
         });
+    if (searchInput.trim() !== '') {
+        const filteredJobs = jobs.filter(job => 
+            job.title.toLowerCase().includes(signinInput) || 
+            job.company.toLowerCase().includes(signinInput)
+        ); main
 
         if (filteredJobs.length > 0) {
             filteredJobs.forEach(job => {
@@ -141,6 +146,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
         alert('Please enter a job title or keywords to search or select a filter.');
     }
     
+ nehapundir26-patch-4
 });
 
 // Clear search input when clicking the clear icon inside the search input
@@ -323,10 +329,15 @@ document.getElementById('clear-btn').addEventListener('click', function() {
 });
 document.getElementById('search-btn').addEventListener('click', function() {
     const searchInput = document.querySelector('.search-input').value.toLowerCase();
+
+})
+document.getElementById('sign-in-btn').addEventListener('click', function() {
+    const signinInput = document.querySelector('.sign-in-input').value.toLowerCase();
+ main
     const filteredJobs = jobs.filter(job => 
-        job.title.toLowerCase().includes(searchInput) || 
-        job.company.toLowerCase().includes(searchInput) ||
-        job.description.toLowerCase().includes(searchInput) // Check description too
+        job.title.toLowerCase().includes(signinInput) || 
+        job.company.toLowerCase().includes(signinInput) ||
+        job.description.toLowerCase().includes(signinInput) // Check description too
     );
 
     // Display filtered jobs
@@ -359,7 +370,7 @@ $(".navbar-menu a").click(function(e){
  e.preventDefault();
 })
 // swiper
-var swiper= new Swiper(".mySwiper",
+var swiper= new swiper(".mySwiper",
 {
     loop:true,
     autoplay:{
@@ -417,6 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedbackForm = document.getElementById("feedback-form");
     const feedbackResponse = document.getElementById("feedback-response");
 
+nehapundir26-patch-4
     feedbackBtn.addEventListener("click", () => {
         feedbackModal.style.display = "block";
     });
@@ -510,6 +522,20 @@ document.addEventListener('DOMContentLoaded', () => {
             moreListBtn.textContent = 'More List';
             showingAll = false;
         }
+    }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+<script>
+    const feedbackForm = document.getElementById('feedback-form');
+    feedbackForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your feedback!');
+        feedbackForm.reset();
     });
-});
+</script>
+ main
 
