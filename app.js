@@ -537,5 +537,28 @@ window.onclick = function(event) {
         feedbackForm.reset();
     });
 </script>
+<script>
+function showSuggestions() {
+    const suggestions = ["Software Engineer", "Data Analyst", "Project Manager", "Google", "Microsoft"];
+    let input = document.getElementById('searchBox').value.toLowerCase();
+    let suggestionBox = document.getElementById('suggestionsBox');
+    suggestionBox.innerHTML = '';
+    if (input.length > 0) {
+        let matches = suggestions.filter(item => item.toLowerCase().includes(input));
+        matches.forEach(match => {
+            suggestionBox.innerHTML += `<div onclick="selectSuggestion('${match}')">${match}</div>`;
+        });
+        suggestionBox.style.display = 'block';
+    } else {
+        suggestionBox.style.display = 'none';
+    }
+}
+
+function selectSuggestion(value) {
+    document.getElementById('searchBox').value = value;
+    document.getElementById('suggestionsBox').style.display = 'none';
+}
+</script>
+
  main
 
